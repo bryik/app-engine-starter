@@ -2,33 +2,46 @@
 
 A template for App Engine projects. [Demo](https://united-tempest-196023.appspot.com/) (not much to see).
 
-**Uses**: [webapp2](https://webapp2.readthedocs.io/en/latest/), [Python 2.7](https://docs.python.org/2/), [Bootstrap v4.0.0-alpha.6](https://v4-alpha.getbootstrap.com/getting-started/introduction/).
+**Built with**:
+- [Bootstrap v4.0.0-alpha.6](https://v4-alpha.getbootstrap.com/getting-started/introduction/)
+- [Python 2.7](https://docs.python.org/2/)
+- [webapp2](https://webapp2.readthedocs.io/en/latest/)
 
 Hosted on [Google App Engine](https://cloud.google.com/appengine/).
 
 # Usage
 
-## How to start the dev server
+First off, go to [Google Cloud Console](https://console.cloud.google.com/) and create a new project. Then install the [Google Cloud SDK](https://cloud.google.com/sdk/).
 
-**Google Cloud SDK must be installed.**
+## How to start the dev server
 
 1. Open shell in the directory containing "app.yaml"
 
 2. Run `dev_appserver.py app.yaml`
 
-3. Go to [http://localhost:8080](http://localhost:8080). The admin console can be accessed at [http://localhost:8000/](http://localhost:8000/).
+3. Go to [http://localhost:8080](http://localhost:8080).
+
+The admin console can be accessed at [http://localhost:8000/](http://localhost:8000/).
 
 ## How to push changes to App Engine
 
-If Google Cloud SDK is configured to this project:
+If Google Cloud SDK is set to this project:
 
 1. Open shell in the directory containing "app.yaml"
 
 2. Run `gcloud app deploy`
 
-If Google Cloud SDK is not configured to this project you can switch to it with
+If Google Cloud SDK is not set to this project you can switch to it with
 
-    `gcloud config set project PROJECT_ID`
+```bash
+    gcloud config set project PROJECT_ID
+```
+
+# Misc
+
+### Why Python 2?
+
+Because Python 3 is not supported by the [App Engine Standard Environment](https://cloud.google.com/appengine/docs/standard/). The standard environment is cheaper than the flexible environment (standard is free within limits). However, it's been a few years since I last checked App Engine's pricing so this might have changed.
 
 ### References
 
