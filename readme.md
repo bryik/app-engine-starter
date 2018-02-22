@@ -4,6 +4,7 @@ A template for App Engine projects. [Demo](https://united-tempest-196023.appspot
 
 **Built with**:
 - [Bootstrap v4.0.0-alpha.6](https://v4-alpha.getbootstrap.com/getting-started/introduction/)
+- [Jinja2](http://jinja.pocoo.org/docs/2.10/)
 - [Python 2.7](https://docs.python.org/2/)
 - [webapp2](https://webapp2.readthedocs.io/en/latest/)
 
