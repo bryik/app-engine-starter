@@ -1,12 +1,11 @@
-# App Engine Starter
+# App Engine Starter - Python 3 Edition
 
-A template for App Engine projects. [Demo](https://united-tempest-196023.appspot.com/) (not much to see).
+In August 2018, Google finally saw fit to bless us with [Python 3 on App Engine's standard environment](https://cloud.google.com/blog/products/gcp/introducing-app-engine-second-generation-runtimes-and-python-3-7). Goodbye Python 2 and webapp2, hello Python 3 and Flask.
 
 **Built with**:
-- [Bootstrap v4.0.0-alpha.6](https://v4-alpha.getbootstrap.com/getting-started/introduction/)
+- [Bootstrap v4.1](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+- [Flask v1.0.2](http://flask.pocoo.org/)
 - [Jinja2](http://jinja.pocoo.org/docs/2.10/)
-- [Python 2.7](https://docs.python.org/2/)
-- [webapp2](https://webapp2.readthedocs.io/en/latest/)
 
 Hosted on [Google App Engine](https://cloud.google.com/appengine/).
 
@@ -14,17 +13,17 @@ Hosted on [Google App Engine](https://cloud.google.com/appengine/).
 
 First off, go to [Google Cloud Console](https://console.cloud.google.com/) and create a new project. Then install the [Google Cloud SDK](https://cloud.google.com/sdk/).
 
-## How to start the dev server
+## Development
 
-1. Open shell in the directory containing "app.yaml"
+1. Open a shell.
 
-2. Run `dev_appserver.py app.yaml`
+2. `pipenv install` to install Flask to a virtual environment (must have [pipenv](https://docs.pipenv.org/) already installed).
 
-3. Go to [http://localhost:8080](http://localhost:8080).
+3. `pipenv shell` to open a new shell with the virtual environment activated.
 
-The admin console can be accessed at [http://localhost:8000/](http://localhost:8000/).
+4. `python main.py` to start a local development server at http://127.0.0.1:8080/
 
-## How to push changes to App Engine
+## Deployment
 
 If Google Cloud SDK is set to this project:
 
@@ -32,18 +31,12 @@ If Google Cloud SDK is set to this project:
 
 2. Run `gcloud app deploy`
 
-If Google Cloud SDK is not set to this project you can switch to it with
+If Google Cloud SDK **is not** set to this project you can switch to it with
 
 ```bash
     gcloud config set project PROJECT_ID
 ```
 
-# Misc
-
-### Why Python 2?
-
-Because Python 3 is not supported by the [App Engine Standard Environment](https://cloud.google.com/appengine/docs/standard/). The standard environment is cheaper than the flexible environment (standard is free within limits). However, it's been a few years since I last checked App Engine's pricing so this might have changed.
-
 ### References
 
-This template was developed during Udacity's [Intro to Programming nanodegree](https://www.udacity.com/course/intro-to-programming-nanodegree--nd000). Some of the code was given, some of it I added later on. My [website](https://www.wsundine.com/) was built off a template like this.
+Bootstrap's [starter template](https://getbootstrap.com/docs/4.1/examples/starter-template/) was adapted slightly (navbar made semi-automatic with Jinja2, removed a bunch of stuff).
