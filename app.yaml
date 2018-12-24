@@ -1,6 +1,1 @@
 runtime: python37
-# Deployment will fail unless Pipfiles are skipped. GAE error:
-#    ERROR: (gcloud.app.deploy) INVALID_ARGUMENT: File 'Pipfile' is not supported.
-skip_files:
-  - Pipfile
-  - Pipfile.lock
